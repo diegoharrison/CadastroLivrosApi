@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroLivros.Domain", "Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroLivros.Infrastructure", "CadastroLivros.Infrastructure\CadastroLivros.Infrastructure.csproj", "{7333431E-4B83-489A-8971-9AA50205B853}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroLivros.Tests", "CadastroLivros.Tests\CadastroLivros.Tests.csproj", "{726088FB-DB98-4C98-B57D-A0B0C7A18D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7333431E-4B83-489A-8971-9AA50205B853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7333431E-4B83-489A-8971-9AA50205B853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7333431E-4B83-489A-8971-9AA50205B853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{726088FB-DB98-4C98-B57D-A0B0C7A18D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{726088FB-DB98-4C98-B57D-A0B0C7A18D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{726088FB-DB98-4C98-B57D-A0B0C7A18D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{726088FB-DB98-4C98-B57D-A0B0C7A18D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{4376F213-3D47-414C-837B-4E53C815542F} = {79046920-64B7-4888-AC6B-E0CE6653CD00}
 		{D61FF908-BB2E-4FA5-896B-FC3A9B846CB4} = {79046920-64B7-4888-AC6B-E0CE6653CD00}
 		{7333431E-4B83-489A-8971-9AA50205B853} = {79046920-64B7-4888-AC6B-E0CE6653CD00}
+		{726088FB-DB98-4C98-B57D-A0B0C7A18D8C} = {79046920-64B7-4888-AC6B-E0CE6653CD00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA28D6C9-4835-421F-9394-8B9813587DD1}
