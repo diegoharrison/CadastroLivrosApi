@@ -16,7 +16,6 @@ namespace CadastroLivrosAPI.API.Controllers
             _assuntoService = assuntoService;
         }
 
-        // GET: api/Assuntos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AssuntoDto>>> GetAssuntos()
         {
@@ -24,7 +23,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return Ok(assuntos);
         }
 
-        // GET: api/Assuntos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AssuntoDto>> GetAssunto(int id)
         {
@@ -36,7 +34,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return Ok(assunto);
         }
 
-        // POST: api/Assuntos
         [HttpPost]
         public async Task<ActionResult<AssuntoDto>> PostAssunto(AssuntoRequest assuntoRequest)
         {
@@ -49,13 +46,12 @@ namespace CadastroLivrosAPI.API.Controllers
             return CreatedAtAction("GetAssunto", new { id = assuntoDto.Id }, assuntoDto);
         }
 
-        // PUT: api/Assuntos/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAssunto(int id, AssuntoRequest assuntoRequest)
         {
             var assuntoDto = new AssuntoDto
             {
-                Id = id,  // O ID é obtido da URL (da requisição PUT)
+                Id = id,  
                 Descricao = assuntoRequest.Descricao
             };
 
@@ -64,7 +60,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Assuntos/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAssunto(int id)
         {

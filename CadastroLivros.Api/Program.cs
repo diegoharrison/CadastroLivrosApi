@@ -9,7 +9,6 @@ CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
 
 
-// Configurar o DbContext com o provedor de SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

@@ -14,7 +14,6 @@ namespace CadastroLivrosAPI.Application.Services
             _livroRepository = livroRepository;
         }
 
-        // Obter todos os livros
         public async Task<IEnumerable<LivroDto>> GetLivrosAsync()
         {
             var livros = await _livroRepository.GetLivrosAsync();
@@ -28,7 +27,6 @@ namespace CadastroLivrosAPI.Application.Services
             });
         }
 
-        // Obter um livro específico por ID
         public async Task<LivroDto> GetLivroByIdAsync(int id)
         {
             var livro = await _livroRepository.GetLivroByIdAsync(id);
@@ -44,7 +42,6 @@ namespace CadastroLivrosAPI.Application.Services
             };
         }
 
-        // Adicionar um novo livro
         public async Task AddLivroAsync(LivroDto livroDto)
         {
             var livro = new Livro
@@ -58,7 +55,6 @@ namespace CadastroLivrosAPI.Application.Services
             await _livroRepository.AddLivroAsync(livro);
         }
 
-        // Atualizar um livro existente
         public async Task UpdateLivroAsync(LivroDto livroDto)
         {
             var livro = new Livro
@@ -73,7 +69,6 @@ namespace CadastroLivrosAPI.Application.Services
             await _livroRepository.UpdateLivroAsync(livro);
         }
 
-        // Excluir um livro
         public async Task DeleteLivroAsync(int id)
         {
             await _livroRepository.DeleteLivroAsync(id);

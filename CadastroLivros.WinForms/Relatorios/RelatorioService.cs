@@ -1,8 +1,9 @@
-﻿//using Microsoft.Data.SqlClient;
+﻿//using System.Data;
 //using Microsoft.Reporting.WinForms;
-//using System.Data;
+//using Microsoft.Extensions.Configuration;
+//using Microsoft.Data.SqlClient;
 
-//namespace CadastroLivros.Api.Relatorios
+//namespace CadastroLivros.WinForms.Relatorios
 //{
 //    public class RelatorioService
 //    {
@@ -14,14 +15,14 @@
 //            _configuration = configuration;
 //        }
 
+//        // Método para gerar o relatório com os dados da view
 //        public ReportDataSource GerarRelatorioLivrosPorAutor()
 //        {
-//            // Obter a string de conexão do arquivo appsettings.json
 //            string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
 //            using (var connection = new SqlConnection(connectionString))
 //            {
-//                // Comando SQL para consultar a view atualizada
+//                // Comando SQL para consultar a view
 //                var command = new SqlCommand("SELECT * FROM vw_LivrosRelatorio", connection);
 //                var dataAdapter = new SqlDataAdapter(command);
 //                var dataSet = new DataSet();

@@ -20,6 +20,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.ReportViewer.WinForms" Version="10.0.40219.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="System.Reactive.Windows.Forms" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>

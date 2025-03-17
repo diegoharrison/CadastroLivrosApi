@@ -16,7 +16,6 @@ namespace CadastroLivrosAPI.API.Controllers
             _livroService = livroService;
         }
 
-        // GET: api/Livros
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LivroDto>>> GetLivros()
         {
@@ -24,7 +23,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return Ok(livros);
         }
 
-        // GET: api/Livros/5
         [HttpGet("{id}")]
         public async Task<ActionResult<LivroDto>> GetLivro(int id)
         {
@@ -36,7 +34,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return Ok(livro);
         }
 
-        // POST: api/Livros
         [HttpPost]
         public async Task<ActionResult<LivroDto>> PostLivro(LivroRequest livroRequest)
         {
@@ -52,7 +49,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return CreatedAtAction("GetLivro", new { id = livroDto.Id }, livroDto);
         }
 
-        // PUT: api/Livros/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLivro(int id, LivroRequest livroRequest)
         {
@@ -70,7 +66,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Livros/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLivro(int id)
         {

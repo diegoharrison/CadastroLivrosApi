@@ -14,7 +14,6 @@ public class LivroAutorController : ControllerBase
         _livroAutorService = livroAutorService;
     }
 
-    // POST: api/LivroAutor
     [HttpPost]
     public async Task<ActionResult> PostLivroAutor(LivroAutorDto livroAutorDTO)
     {
@@ -29,7 +28,6 @@ public class LivroAutorController : ControllerBase
         return CreatedAtAction(nameof(GetLivroAutor), new { livroId = livroAutor.LivroId, autorId = livroAutor.AutorId }, livroAutor);
     }
 
-    // GET: api/LivroAutor
     [HttpGet]
     public async Task<ActionResult<IEnumerable<LivroAutorDto>>> GetLivroAutores()
     {
@@ -40,11 +38,9 @@ public class LivroAutorController : ControllerBase
             return NotFound("Não há associações de livros e autores.");
         }
 
-        // Retorna apenas os IDs (sem as entidades completas)
         return Ok(livroAutores.Select(la => new { la.LivroId, la.AutorId }));
     }
 
-    // GET: api/LivroAutor/5/10
     [HttpGet("{livroId}/{autorId}")]
     public async Task<ActionResult<LivroAutorDto>> GetLivroAutor(int livroId, int autorId)
     {
@@ -55,11 +51,9 @@ public class LivroAutorController : ControllerBase
             return NotFound("Associação entre o livro e o autor não encontrada.");
         }
 
-        // Retorna apenas os IDs
         return Ok(new { livroAutor.LivroId, livroAutor.AutorId });
     }
 
-    // DELETE: api/LivroAutor/5/10
     [HttpDelete("{livroId}/{autorId}")]
     public async Task<IActionResult> DeleteLivroAutor(int livroId, int autorId)
     {

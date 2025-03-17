@@ -14,7 +14,6 @@ namespace CadastroLivrosAPI.Application.Services
             _autorRepository = autorRepository;
         }
 
-        // Obter todos os autores
         public async Task<IEnumerable<AutorDto>> GetAutoresAsync()
         {
             var autores = await _autorRepository.GetAutoresAsync();
@@ -25,7 +24,6 @@ namespace CadastroLivrosAPI.Application.Services
             });
         }
 
-        // Obter um autor específico por ID
         public async Task<AutorDto> GetAutorByIdAsync(int id)
         {
             var autor = await _autorRepository.GetAutorByIdAsync(id);
@@ -38,7 +36,6 @@ namespace CadastroLivrosAPI.Application.Services
             };
         }
 
-        // Adicionar um novo autor
         public async Task AddAutorAsync(AutorDto autorDto)
         {
             var autor = new Autor
@@ -49,7 +46,6 @@ namespace CadastroLivrosAPI.Application.Services
             await _autorRepository.AddAutorAsync(autor);
         }
 
-        // Atualizar um autor existente
         public async Task UpdateAutorAsync(AutorDto autorDto)
         {
             var autor = new Autor
@@ -61,7 +57,6 @@ namespace CadastroLivrosAPI.Application.Services
             await _autorRepository.UpdateAutorAsync(autor);
         }
 
-        // Excluir um autor
         public async Task DeleteAutorAsync(int id)
         {
             await _autorRepository.DeleteAutorAsync(id);

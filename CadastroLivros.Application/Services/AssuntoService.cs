@@ -14,7 +14,6 @@ namespace CadastroLivrosAPI.Application.Services
             _assuntoRepository = assuntoRepository;
         }
 
-        // Obter todos os assuntos
         public async Task<IEnumerable<AssuntoDto>> GetAssuntosAsync()
         {
             var assuntos = await _assuntoRepository.GetAssuntosAsync();
@@ -25,7 +24,6 @@ namespace CadastroLivrosAPI.Application.Services
             });
         }
 
-        // Obter um assunto específico por ID
         public async Task<AssuntoDto> GetAssuntoByIdAsync(int id)
         {
             var assunto = await _assuntoRepository.GetAssuntoByIdAsync(id);
@@ -38,7 +36,6 @@ namespace CadastroLivrosAPI.Application.Services
             };
         }
 
-        // Adicionar um novo assunto
         public async Task AddAssuntoAsync(AssuntoDto assuntoDto)
         {
             var assunto = new Assunto
@@ -49,7 +46,6 @@ namespace CadastroLivrosAPI.Application.Services
             await _assuntoRepository.AddAssuntoAsync(assunto);
         }
 
-        // Atualizar um assunto existente
         public async Task UpdateAssuntoAsync(AssuntoDto assuntoDto)
         {
             var assunto = new Assunto
@@ -61,7 +57,6 @@ namespace CadastroLivrosAPI.Application.Services
             await _assuntoRepository.UpdateAssuntoAsync(assunto);
         }
 
-        // Excluir um assunto
         public async Task DeleteAssuntoAsync(int id)
         {
             await _assuntoRepository.DeleteAssuntoAsync(id);

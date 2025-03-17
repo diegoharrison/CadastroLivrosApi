@@ -9,5 +9,4 @@ namespace CadastroLivros.Application.Interfaces
         Task<LivroAutor> ObterLivroAutorPorIdsAsync(int livroId, int autorId);
         Task<LivroAutor> RemoverLivroAutorAsync(int livroId, int autorId);
     }
-
 }

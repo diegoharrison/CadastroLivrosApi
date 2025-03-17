@@ -16,7 +16,6 @@ namespace CadastroLivrosAPI.API.Controllers
             _autorService = autorService;
         }
 
-        // GET: api/Autores
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AutorDto>>> GetAutores()
         {
@@ -24,7 +23,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return Ok(autores);
         }
 
-        // GET: api/Autores/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AutorDto>> GetAutor(int id)
         {
@@ -36,7 +34,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return Ok(autor);
         }
 
-        // POST: api/Autores
         [HttpPost]
         public async Task<ActionResult<AutorDto>> PostAutor(AutorRequest autorRequest)
         {
@@ -49,13 +46,12 @@ namespace CadastroLivrosAPI.API.Controllers
             return CreatedAtAction("GetAutor", new { id = autorDto.Id }, autorDto);
         }
 
-        // PUT: api/Autores/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAutor(int id, AutorRequest autorRequest)
         {
             var autorDto = new AutorDto
             {
-                Id = id,  // O ID é obtido da URL (da requisição PUT)
+                Id = id,  
                 Nome = autorRequest.Nome
             };
 
@@ -64,7 +60,6 @@ namespace CadastroLivrosAPI.API.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Autores/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAutor(int id)
         {
